@@ -28,15 +28,15 @@ async function checkWeather(city) {
 
     switch(weather_data.weather[0].main) {
         case 'Clouds': 
-            document.body.style.backgroundImage = "url('assests/cloud.jpeg')";
+            document.body.style.backgroundImage = "url('assests/cloud.webp')";
             break;
 
         case 'Rain':
-            document.body.style.backgroundImage = "url('assests/rain.jpg')";
+            document.body.style.backgroundImage = "url('assests/rain.webp')";
             break;
 
         case 'Mist':
-            document.body.style.backgroundImage = "url('assests/mist.jpeg')";
+            document.body.style.backgroundImage = "url('assests/mist.jpg')";
             break;   
         
         case 'Snow': 
