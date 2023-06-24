@@ -11,15 +11,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #87CEFA, #191970);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.8)), url(assests/clear.jpg); 
+    background-size: cover;
+    color: white;
 }
 
 .container {
-    width: 400px;
+    width: 500px;
     height: min-content;
-    background-color: white;
     border-radius: 12px;
     padding: 28px;
+    
+}
+
+.header {
+    top: 20px;
 }
 
 .search-box {
@@ -55,4 +61,45 @@ body {
 .search-box button:hover {
     background-color: #ababab;
     color: white;
+}
+
+.weather-body {
+    display: flex;
+    flex-direction: column;
+    margin-block: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.large-text {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.small-text {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.temperature p{
+    position: relative;
+}
+
+.temperature sup {
+    font-size: 1.5rem;
+    position: absolute;
+    font-weight: 400;
+}
+
+.icon {
+    font-size: 50px;
 }

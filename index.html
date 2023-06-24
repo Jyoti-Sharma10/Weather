@@ -12,18 +12,31 @@
         <div class="header">
             <div class="search-box">
                 <input type="text" class="text-box" placeholder="Enter your location">
-                <button class="fa-solid fa-magnifying-glass"></button>
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
             </div>
         </div>
         <div class="weather-body">
-            <p class="temperature"></p>
-            <p class="description"></p>
-        </div>
-        <div class="weather-details">
-            <div class="humidity"></div>
-            <div class="wind-speed"></div>
-        </div>
+            <div class="temperature flex">
+                <p class="large-text">30<sup>°C </sup></p>
+                <p class="small-text">Sunny Day</p>
+            </div>
+            <div class="humidity flex">
+                <i class="fa-solid fa-droplet icon"></i>
+                <div class="text flex">
+                    <p class="large-text">23%</p>
+                    <p class="small-text">Humidity</p>
+                </div>
+            </div>
+            <div class="wind-speed flex">
+                <i class="fa-solid fa-wind icon"></i>
+                <div class="text flex">
+                    <p class="large-text">25 km/hr</p>
+                    <p class="small-text">wind speed</p>
+                </div>
+            </div>
+        </div> 
     </div>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/69067c3170.js" crossorigin="anonymous"></script>
 </body>
 </html>
