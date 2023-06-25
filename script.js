@@ -5,6 +5,7 @@ const temperature = document.querySelector('.temp');
 const description = document.querySelector('.desc');
 const humidity = document.querySelector('.hum');
 const windSpeed = document.querySelector('.wind');
+const notFound = document.querySelector('.location-not-found');
 const weatherBody = document.querySelector('.weather-body');
 
 async function checkWeather(city) {
@@ -15,11 +16,13 @@ async function checkWeather(city) {
     const weather_data = await fetch(`${url}`).then(response => response.json());
 
     if(weather_data.cod === `404`) {
-        document.body.style.backgroundImage = "url('assests/error.jpg')"; 
+        notFound.style.display = "flex"; 
         weatherBody.style.display = "none";
+        document.body.style.background = "linear-gradient(to right, #87CEFA, #191970)"; 
         return;
     }
 
+    notFound.style.display = "none";
     weatherBody.style.display = "flex";
     temperature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
     description.innerHTML = `${weather_data.weather[0].description}`;
